@@ -12,6 +12,7 @@ namespace chess
             virtual ~KingPiece();
             ColorOfPiece getColor();
             Piece getPiece();
+            bool is_valid_for_move();
     };
 };
 

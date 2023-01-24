@@ -10,7 +10,7 @@ namespace chess {
             virtual ~BishopPiece();
             ColorOfPiece getColor();
             Piece getPiece();
-
+            bool is_valid_for_move();
     };
 };
 

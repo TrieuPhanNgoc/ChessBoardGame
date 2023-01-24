@@ -14,4 +14,8 @@ namespace chess
     {
         return this->m_piece;
     }
+
+    bool BishopPiece::is_valid_for_move() {
+        
+    }
 }

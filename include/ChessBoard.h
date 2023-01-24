@@ -3,9 +3,15 @@
 
 #include "common.h"
 #include "GamePiece.h"
+#include "KingPiece.h"
+#include "BishopPiece.h"
 
 namespace chess {
     class ChessBoard;
+
+    class Pattern {
+        
+    };
 
     class ChessBoard { 
         public:
@@ -20,16 +26,20 @@ namespace chess {
 
         public:
             // static ChessBoard& getInstance();
-            ChessBoard() {
-            }
-
+            ChessBoard();
             ~ChessBoard();
 
+            void initialize();
             void createBoard();
             void updateBoard();
+            void deleteBoard();
         
         protected:
-            GamePiece MainGameBoard[8][8];
+            GamePiece* MainGameBoard[8][8];
+            Pattern m_pattern;
+
+        private:
+            std::string* m_name;
     };
 };
 

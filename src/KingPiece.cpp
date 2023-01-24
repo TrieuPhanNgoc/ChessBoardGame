@@ -14,4 +14,8 @@ namespace chess
     Piece KingPiece::getPiece() {
         return this->m_piece;
     }
+
+    bool KingPiece::is_valid_for_move() {
+
+    }
 }

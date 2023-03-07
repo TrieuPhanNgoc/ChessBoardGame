@@ -2,11 +2,16 @@
 
 namespace chess {
     ChessBoard::ChessBoard() {
-        createBoard();
+        initialize();
     }
     
     ChessBoard::~ChessBoard() {
         deleteBoard();
+    }
+
+    void ChessBoard::initialize() {
+        std::string list_name[] = {"KG", "QN", "BS", "KT", "PN", "RK"};
+        m_name = std::move(list_name);
     }
 
     void ChessBoard::createBoard() {
@@ -32,7 +37,6 @@ namespace chess {
 
     void ChessBoard::deleteBoard() {
         for (int i = 0; i < 8; ++i) {
-
             for (int j = 0; j < 8; ++j) {
                 // Remove the board if any position exist
                 if (MainGameBoard[i][j]) {

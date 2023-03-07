@@ -15,10 +15,10 @@ namespace chess
     {
         King = 0,
         Queen,
-        Pawn,
         Bishop,
-        Rook,
-        Knight
+        Knight,
+        Pawn,
+        Rook
     } Piece;
 
     class GamePiece
@@ -28,6 +28,7 @@ namespace chess
             ~GamePiece() {}
             virtual ColorOfPiece getColor() = 0;
             virtual Piece getPiece() = 0;
+            virtual bool is_valid_for_move() = 0;
 
         protected:
             ColorOfPiece m_color;
